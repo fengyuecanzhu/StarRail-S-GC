@@ -4,6 +4,8 @@
 
 This repository provides code for a simple cheat for the game Honkai Star Rail. For informational purposes only. **Use at your own risk.**
 
+### Use [discussions](https://github.com/ky-ler/StarRail-S-GC/discussions) for anything not related to bugs/feature requests
+
 ## Hotkeys
 
 - F1: Open/Close menu
@@ -39,3 +41,5 @@ Step 6: Select StarRail.exe.
 Step 7: Done!
 
 ![image](https://user-images.githubusercontent.com/113752393/236632880-84855a81-098e-4843-a4e5-877b78b8b110.png)
+
+
