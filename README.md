@@ -1,8 +1,26 @@
-# Honkai: Star Rail Simple Game Cheat:
+# Honkai: Star Rail Simple Game Cheat
 
-This repository provides code for a simple cheat for the game Honkai Star Rail. For informational purposes only. Use at your own risk.
+[English Version](https://github.com/ky-ler/StarRail-S-GC) | [Chinese Version](https://github.com/ky-ler/StarRail-S-GC/tree/localization/chinese)
 
-# Instruction:
+This repository provides code for a simple cheat for the game Honkai Star Rail. For informational purposes only. **Use at your own risk.**
+
+## Hotkeys
+
+- F1: Open/Close menu
+
+- F2: Toggle World Speed
+
+- F3: Toggle Battle Speed
+
+- F4: Toggle Auto-Dialogue (CAPSLOCK if not automatically detected)
+
+- F5: Toggle Invisibility
+
+- F6: Toggle Force Auto-Battle
+
+- F7: Toggle Peeking
+
+# Instructions:
 
 Step 1: Download the code
 
@@ -21,19 +39,3 @@ Step 6: Select StarRail.exe.
 Step 7: Done!
 
 ![image](https://user-images.githubusercontent.com/113752393/236632880-84855a81-098e-4843-a4e5-877b78b8b110.png)
-
-## Hotkeys
-
-- F1: Open/Close menu
-
-- F2: Toggle World Speed
-
-- F3: Toggle Battle Speed
-
-- F4: Toggle Auto-Dialogue (CAPSLOCK if not automatically detected)
-
-- F5: Toggle Invisibility
-
-- F6: Toggle Force Auto-Battle
-
-- F7: Toggle Peeking
