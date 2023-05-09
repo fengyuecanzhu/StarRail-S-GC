@@ -6,9 +6,7 @@
 #include <ImGui/imgui_internal.h>
 #include <ImGui/misc/cpp/imgui_stdlib.h>
 
-#include "../features/dialogue.h"
-#include "../features/other.h"
-#include "../features/speedhack.h"
+#include "../features/features.h"
 
 namespace overlay {
   void Update();
