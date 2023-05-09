@@ -14,54 +14,77 @@ void overlay::Update() {
 
   ImGui::BeginTabBar("##tabs");
 
-  if (ImGui::BeginTabItem("World")) {
-    ImGui::Checkbox("Speed Modifier", &globals::world::speed_hack);
+  if (ImGui::BeginTabItem(u8"大世界选项")) // World
+  {
+    ImGui::Checkbox(u8"速度调整",
+                    &globals::world::speed_hack); // Speed Modifier
 
     if (globals::world::speed_hack) {
-      ImGui::SliderFloat("Global", &globals::world::global_speed, 0.1f, 10.f,
-                         "%.1f");
-      ImGui::SliderFloat("Dialogue", &globals::world::dialogue_speed, 0.1f,
+      // Global
+      ImGui::SliderFloat(u8"全局", &globals::world::global_speed, 0.1f,
+                         10.f, "%.1f");
+      // Dialogue
+      ImGui::SliderFloat(u8"对话选项", &globals::world::dialogue_speed, 0.1f,
                          10.f, "%.1f");
     }
 
-    ImGui::Checkbox("Peeking", &globals::world::peeking);
+    ImGui::Checkbox(u8"反虚化",
+                    &globals::world::peeking); // Peeking
 
-    ImGui::Checkbox("Auto-Dialogue", &globals::world::auto_dialogue);
+    ImGui::Checkbox(u8"自动对话",
+                    &globals::world::auto_dialogue); // Auto-Dialogue
 
     if (globals::world::auto_dialogue) {
-      ImGui::Text("also works on hotkey (CAPSLOCK)");
-      ImGui::Checkbox("Mouse Mode", &globals::world::mouse_mode);
+      ImGui::Text(
+          u8"也适用于热键（CAPSLOCK）"); // "also works on hotkey (CAPSLOCK)
+      ImGui::Checkbox(u8"鼠标模式",
+                      &globals::world::mouse_mode); // Mouse Mode
     }
 
-    ImGui::Checkbox("Invisibility", &globals::world::invisibility);
+    ImGui::Checkbox(u8"隐身",
+                    &globals::world::invisibility); // Invisibility
 
     ImGui::EndTabItem();
   }
 
-  if (ImGui::BeginTabItem("Battle")) {
-    ImGui::Checkbox("Speed Modifier", &globals::battle::speed_hack);
+  if (ImGui::BeginTabItem(u8"战斗选项")) // Battle
+  {
+    ImGui::Checkbox(u8"速度调整",
+                    &globals::battle::speed_hack); // Speed Modifier
 
     if (globals::battle::speed_hack) {
-      ImGui::SliderFloat("Battle", &globals::battle::battle_speed, 0.1f, 100.f,
-                         "%.1f");
+
+      // Battle
+      ImGui::SliderFloat(u8"战斗选项", &globals::battle::battle_speed, 0.1f,
+                         100.f, "%.1f");
     }
 
     // ImGui::Checkbox("Auto-Battle Unlock",
     // &globals::battle::auto_battle_unlock);
 
-    ImGui::Checkbox("Force Auto-Battle", &globals::battle::force_battle);
+    ImGui::Checkbox(u8"强制自动战斗",
+                    &globals::battle::force_battle); // Force Auto-Battle
 
     if (globals::battle::force_battle) {
-      ImGui::Text("if you enabled it in battle then you need to do some "
-                  "action to make "
-                  "it work");
+      ImGui::Text(
+          u8"如果你在战斗中启用了它，那么你需要做一些动作来使它起作用"); // "if
+                                                                         // you
+                                                                         // enabled
+                                                                         // it
+                                                                         // in
+                                                                         // battle
+                                                                         // then
+                                                                         // you
+                                     // need to do some action to make it work
     }
 
     ImGui::EndTabItem();
   }
 
-  if (ImGui::BeginTabItem("Other")) {
-    ImGui::Checkbox("FPS Unlock", &globals::other::fps_unlock);
+  if (ImGui::BeginTabItem(u8"其他")) // Other
+  {
+    ImGui::Checkbox(u8"解锁帧数上限",
+                    &globals::other::fps_unlock); // FPS Unlock
 
     if (globals::other::fps_unlock) {
       ImGui::InputInt("FPS", &globals::other::fps);
@@ -70,17 +93,21 @@ void overlay::Update() {
     ImGui::EndTabItem();
   }
 
-  if (ImGui::BeginTabItem("Debug")) {
-    ImGui::Text("Phase: %s", hooks::game::get_phase_in_text());
+  if (ImGui::BeginTabItem(u8"调试")) // Debug
+  {
+
+    ImGui::Text(u8"阶段: %s", hooks::game::get_phase_in_text());
     ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
 
     ImGui::EndTabItem();
   }
 
-  if (ImGui::BeginTabItem("Settings")) {
+  if (ImGui::BeginTabItem(u8"设置")) // Settings
+  {
     static bool pinWindow = false;
 
-    if (ImGui::Checkbox("Pin Window", &pinWindow)) {
+    if (ImGui::Checkbox(u8"窗口固定", &pinWindow)) // Pin Window
+    {
       if (pinWindow) {
         classFinderWindowFlags |= ImGuiWindowFlags_NoMove;
         classFinderWindowFlags |= ImGuiWindowFlags_NoResize;
@@ -92,22 +119,18 @@ void overlay::Update() {
 
     ImGui::SameLine();
 
-    if (ImGui::Button("Reset Position"))
-      ImGui::SetWindowPos(ImVec2(0, 0));
-
-    ImGui::SameLine();
-
-    if (ImGui::Button("Unload"))
+    if (ImGui::Button(u8"关闭")) // Unload - (translated to "closure")
       globals::unload = true;
 
-    if (ImGui::Button("Save Config")) {
+    if (ImGui::Button(u8"保存设置")) { // Save Settings
       config::Save();
     }
 
     ImGui::EndTabItem();
   }
 
-  if (ImGui::BeginTabItem("About")) {
+  if (ImGui::BeginTabItem(u8"关于")) // About
+  {
     ImGui::Text("About this project");
     ImGui::Text("This project was created by Z4ee");
     ImGui::Text("This project is free, not for sell");
