@@ -42,7 +42,7 @@ void Setup() {
   if (!device::Setup())
     puts("[-] Failed to setup device hooks!");
   else
-    puts("[+] device hooks setup successfully!");
+    puts("[+] Device hooks setup successfully!");
 
   return overlay::Main();
 }
