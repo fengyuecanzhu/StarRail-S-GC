@@ -1,4 +1,4 @@
-#include "dialogue.h"
+#include "features.h"
 
 namespace features::dialogue {
   void AutoDialogue() {

@@ -48,9 +48,7 @@
     <ClInclude Include="dependencies\MinHook\hde\table64.h" />
     <ClInclude Include="dependencies\MinHook\MinHook.h" />
     <ClInclude Include="dependencies\MinHook\trampoline.h" />
-    <ClInclude Include="features\dialogue.h" />
-    <ClInclude Include="features\other.h" />
-    <ClInclude Include="features\speedhack.h" />
+    <ClInclude Include="features\features.h" />
     <ClInclude Include="globals.hpp" />
     <ClInclude Include="overlay\device.h" />
     <ClInclude Include="overlay\overlay.h" />
