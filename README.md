@@ -1,3 +1,5 @@
+# FUTURE VERSIONS WILL BE RELEASED [HERE](https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/584294-honkai-star-rail-cheat-pompoms-paradise.html)
+
 # Honkai: Star Rail Simple Game Cheat
 
 [English Version](https://github.com/ky-ler/StarRail-S-GC) | [Chinese Version](https://github.com/ky-ler/StarRail-S-GC/tree/localization/chinese)
